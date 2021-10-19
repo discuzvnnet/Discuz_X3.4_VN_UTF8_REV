@@ -1,12 +1,11 @@
 [<img src="https://raw.githubusercontent.com/discuzvnnet/Discuz_X3.4_VN_UTF8_REV/main/upload/static/image/common/logo.png" width="250"/>](logo.png)
 
-# Discuz! Thai - ระบบเว็บบอร์ดดิสคัสภาษาไทย ที่ครอบคลุมการใช้งานมากที่สุด
+# Discuz! VN
 
 [![GitHub version](https://img.shields.io/github/v/release/jaideejung007/discuzth.svg)](https://github.com/jaideejung007/discuzth)
 ![SE number of downloads](https://img.shields.io/github/downloads/jaideejung007/discuzth/latest/total.svg)
 [![download latest release](https://img.shields.io/badge/Discuz!%20X3.4-Download-success.svg)](https://github.com/jaideejung007/discuzth/releases/latest)
-[![download Discuz! X3.5 Development](https://img.shields.io/badge/Discuz!%20X3.5-Download-critical.svg)](https://github.com/jaideejung007/discuzth/tree/v3.5) 
-[![SE](https://img.shields.io/badge/LINE%20OPENCHAT%20Discuz!%20Thai-Join%20Chat-brightgreen.svg)](https://line.me/ti/g2/aQG_0-x6WcphQ4ChUDul9Q "LINE OPENCHAT Discuz! Thai (ดิสคัสภาษาไทย)")
+
 
 # Hướng dẫn #
 Hệ thống diễn đàn! xuất xứ từ Trung Quốc. Nó được phát triển với PHP, MySQL và được dịch sang tiếng Việt bởi những người Việt có tâm huyết với hệ thống diễn đàn này Phiên bản X3.4 hiện đã có sẵn (và phiên bản Discuz! X3.5 đang được phát triển. Trong đó có nhiều tính năng mà chắc chắn là bất ngờ chỉ cần kiên nhẫn chờ đợi)
