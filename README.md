@@ -2,7 +2,7 @@
 
 # Discuz! VN
 
-[![GitHub version](https://img.shields.io/github/v/release/jaideejung007/discuzth.svg)](https://github.com/jaideejung007/discuzth)
+[![GitHub version](https://img.shields.io/github/v/release/discuzvnnet/Discuz_X3.4_VN_UTF8_REV)](https://github.com/discuzvnnet/Discuz_X3.4_VN_UTF8_REV)
 ![SE number of downloads](https://img.shields.io/github/downloads/jaideejung007/discuzth/latest/total.svg)
 [![download latest release](https://img.shields.io/badge/Discuz!%20X3.4-Download-success.svg)](https://github.com/jaideejung007/discuzth/releases/latest)
 
