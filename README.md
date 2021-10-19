@@ -1,3 +1,5 @@
+[<img src="https://raw.githubusercontent.com/discuzvnnet/Discuz_X3.4_VN_UTF8_REV/main/upload/static/image/common/logo.png" width="250"/>](logo.png)
+
 # Hướng dẫn #
 Hệ thống diễn đàn! xuất xứ từ Trung Quốc. Nó được phát triển với PHP, MySQL và được dịch sang tiếng Việt bởi những người Việt có tâm huyết với hệ thống diễn đàn này Phiên bản X3.4 hiện đã có sẵn (và phiên bản Discuz! X3.5 đang được phát triển. Trong đó có nhiều tính năng mà chắc chắn là bất ngờ chỉ cần kiên nhẫn chờ đợi)
 
