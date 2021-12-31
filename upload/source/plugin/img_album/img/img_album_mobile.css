@@ -1,0 +1,46 @@
+#miku_img_album{position: relative; width: 100%; background-color: #DDD; border:1px solid rgba(0,0,0,0.05); margin:5px auto; overflow: hidden; } 
+#miku_img_album .miku_img_album_main{width: 100%;}
+#miku_img_album .bigimg{overflow: hidden;}
+#miku_img_album .bigimg li{display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center; -webkit-backface-visibility:hidden; position: absolute; width: 100%; overflow: hidden; }
+#miku_img_album .bigimg li img{vertical-align: middle; max-height: none; max-width: none;}
+#miku_img_album .controller{position:absolute; z-index: 2; width: 100%; text-align: center; padding-top:5px; }
+#miku_img_album .tool{display: inline-block; height: 33px; border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; background-color: rgba(0,0,0,0.5); color:#CCC; }
+#miku_img_album .cur-num{display: inline-block; text-align: center; line-height: 32px; font-size: 14px; }
+#miku_img_album_cur_index{font-size: 16px; }
+#miku_img_album .prev{display: inline-block; font-size: 16px; width: 35px; }
+#miku_img_album .next{display: inline-block; font-size: 16px; width: 35px; }
+#miku_img_album .bigimg .end{height:100%;}
+#miku_img_album .bigimg .end div{position: absolute; top:45%; left:60px; background-color: #DDD; border:1px dashed #999; border-radius: 5px; padding: 3px 10px; font-size: 18px; color:#888; }
+#miku_img_album .bigimg .tips{position: absolute; bottom: 0; left: 0; width: 100%; background: url(tips_bg.png); background-color: rgba(0,0,0,0.3); border-top: 1px solid rgba(0,0,0,0.1); }
+#miku_img_album .bigimg .tips p{padding: 3px 8px; height:36px; line-height: 36px; text-indent: 1em; font-size: 14px; color:#DDD; overflow: hidden; text-overflow: ellipsis; white-space:nowrap; }
+#miku_img_album .bigimg .loadding {color:#AAA; line-height: 20px; }
+#miku_img_album .bigimg .loadding i{display: inline-block; height: 12px; width: 12px; border:2px solid #AAA; border-left-color: transparent; border-radius: 12px; -webkit-animation: 1s miku-img-album-loading linear infinite; }
+#miku_img_album .bigimg .loadding span{display: inline-block; font-size: 14px; margin:3px; }
+#miku_img_album .miku_img_album_mask{position:fixed; top:0; left:0; width:100%;height:100%;background:url('mask_bg.png'); background-color: rgba(0,0,0,0.3); z-index:999;}
+#miku_img_album .miku_img_album_mask .controller{position: absolute; top: 30%; right: 10px; width: 40px; line-height: 40px; font-size: 30px; color: #CCC; text-align: center; background-color: rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2); border-radius: 3px; }
+#miku_img_album .miku_img_album_mask .close{display: inline-block; padding-top: 8px; width: 40px; color:#eb3f2f; }
+#miku_img_album .miku_img_album_mask .zoom{display: inline-block; margin-top:10px; padding-bottom: 8px; width: 40px; color:#77c34f; }
+#miku_img_album .miku_img_album_mask img{display: inline-block; max-width: none; max-height: none; }
+#miku_img_album .miku_img_album_mask .img_album_solider{overflow: hidden; visibility: hidden;position: relative;height:100%;width: 100%;}
+#miku_img_album .miku_img_album_mask .img_album_solider_wrap{height:100%;overflow: hidden;position: relative;}
+#miku_img_album .miku_img_album_mask .img_album_sitem{ float:left; height:100%;width:100%;overflow:hidden;position: relative;}
+#miku_img_album .miku_img_album_mask .img_album_sitem-minimg{ float:left; height:100%;width:100%;position: relative; display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center;background:url('loading.gif')center center no-repeat; }
+#miku_img_album .miku_img_album_mask .img_album_zoom{width: 100%; height:100%; display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center;-webkit-box-orient: vertical;text-align: center;}
+#miku_img_album .miku_img_album_mask .img_album_zoom-minimg{width: 100%;height:100%;display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center; }
+#miku_img_album .miku_img_album_mask .img_album_zoom img{position:relative;}
+#miku_img_album .miku_img_album_mask .img-status{display: none; position: absolute; top: 20%; left:0; width: 100%; text-align: center; }
+#miku_img_album .miku_img_album_mask .img-status span{display: inline-block; border-radius: 3px; background-color: rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.2); width: 100px; line-height: 36px; font-size: 17px; font-weight: bold; text-align: center; color: #DDD; }
+#miku_img_album .miku_img_album_mask .img-status i{font-size: 16px;color:#d0d0d0;}
+#miku_img_album .miku_img_album_mask .tips{position: absolute; z-index:1000;bottom: 0; left:0; width: 100%; background-color: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.1); line-height: 18px; text-indent: 1em; font-size: 14px; color:#DDD; max-height: 18%; overflow: scroll;/* -webkit-overflow-scrolling : touch; */}
+#miku_img_album .miku_img_album_mask .tips .tips-content{padding: 10px 8px; }
+#miku_img_album .miku_img_album_mask .loadding{color: #CCC; height:30px; line-height: 30px; }
+#miku_img_album .miku_img_album_mask .img-block{height:100%;width:100%; overflow: hidden;}
+#miku_img_album .miku_img_album_mask .img-wrap{}
+#miku_img_album .miku_img_album_mask .loadding{position: absolute; top:0; left:0; width:100%;height:100%;z-index: 1000; text-align: center;vertical-align: middle;display: -webkit-box; -webkit-box-pack: center; -webkit-box-align: center;}
+#miku_img_album .miku_img_album_mask .loadding i{-webkit-animation: 1s miku-img-album-loading linear infinite; display: inline-block; font-size: 30px; }
+#miku_img_album .miku_img_album_mask .loadding span{line-height: 22px; display: inline-block; }
+#miku_img_album .miku_img_album .iconfont{font-size: 16px;}
+#miku_img_album .miku_img_album_mask .iconfont{font-size:30px;}
+#miku_img_album .miku_img_album_mask .maxsize-none{ max-width: none!important; max-height: none!important;}
+#miku_img_album .miku_img_album_mask .maxsize-100{ max-width: 100%!important; max-height: 100%!important;}
+@-webkit-keyframes miku-img-album-loading{0% {-webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; } 100% {-webkit-transform: rotate(360deg); transform: rotate(360deg); -webkit-transform-origin:50% 50%; transform-origin:50% 50%; } }

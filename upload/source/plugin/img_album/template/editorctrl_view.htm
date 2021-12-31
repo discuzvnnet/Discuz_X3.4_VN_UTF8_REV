@@ -1,0 +1,43 @@
+<!--{block btn_str}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/img_album/img/img_album.css?v30"/>
+<a id="miku_img_album_btn" title="{lang img_album:tip1}" href="javascript:;">{lang img_album:tuce}</a>
+<script type="text/javascript">
+	$("miku_img_album_btn").onclick = function (){
+		checkFocus();
+		var sel,selection;
+		var ctrlid = this.id;
+		var opentag = '[TUCE]';
+		var closetag = '[/TUCE]';
+		var menuwidth = 390;
+
+		if(BROWSER.ie) {
+			sel = wysiwyg ? editdoc.selection.createRange() : document.selection.createRange();
+		}
+		selection = sel ? (wysiwyg ? sel.htmlText : sel.text) : getSel();
+		if(selection) {
+			if(wysiwyg){
+				opentag = "<br/>[TUCE]<br/>";
+				closetag = "<br/>[/TUCE]<br/>";
+				insertText((opentag + selection + closetag), strlen(opentag), strlen(closetag), true, sel);
+			} else{
+				opentag = "\\n[TUCE]\\n";
+				closetag = "\\n[/TUCE]\\n";
+				insertText((opentag+ selection +closetag), strlen(opentag), strlen(closetag), true, sel);
+			}
+		}else{
+			var menu = document.createElement('div');
+			menu.id = ctrlid+'_menu';
+			menu.style.display = 'none';
+			menu.className='p_pof upf';
+			menu.style.width =menuwidth+'px';
+			var html_str ='';
+			var html_str ='<div class="p_opt cl"><span style="margin:-10px -10px 0 0" class="y"><a href="javascript:;" class="flbc" onclick="hideMenu();return false;">{lang img_album:close}</a></span><div><p class="pbn">{lang img_album:shiyong_fangfa}</p><button class="pn pnc" id="e_tuce_submit" type="button" onclick="hideMenu();return false;"><strong>{lang img_album:close2}</strong></button></div></div>';
+
+			menu.innerHTML = html_str;
+			$(editorid + '_editortoolbar').appendChild(menu);
+			showMenu({'ctrlid':ctrlid,'evt':'click' ,'pos':'43!', 'duration':3, 'drag':1,'mtype':'menu'});
+		}
+	}
+</script>
+
+<!--{/block}-->

@@ -1,0 +1,80 @@
+<!--{block tuceHTML}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/img_album/font/touch/iconfont.css?v30" />	
+<link rel="stylesheet" type="text/css" href="source/plugin/img_album/img/img_album_mobile.css?v30" />	
+<div id="miku_img_album" style="background-color: {$config[mobile_bgcolor]}; border-color: {$config[mobile_bdcolor]}">
+<!-- 框架 -->
+<div id="miku_img_album_main_{$pid}" class="miku_img_album_main">
+	<!-- 左右按钮、张数指示器-->
+	<div class="controller">
+		<div class="tool">
+			<div class="prev"><i class="iconfont icon-back"></i></div>
+			<div class="cur-num">
+				<span id="miku_img_album_cur_index_{$pid}">1</span> / <span>{$imgNum}</span>
+			</div>
+			<div class="next"><i class="iconfont icon-right"></i></div>
+		</div>
+	</div>
+	<!-- 大图 -->
+	<div id="miku_img_album_big_img_{$pid}" class="bigimg" {if $config[mobile_height_mode] == 1}style="min-height:{$tuceAttr[min_height]}px"{/if}>
+		<ul>
+		<!--{loop $imgArr $i $img}-->
+			<li style="-webkit-transform:translate3d(2000px,0,0);{if $config[mobile_height_mode] == 1}min-height:{$tuceAttr[min_height]}px;{/if}">
+				<div class="tips" style="{if empty($tipsArr[$i])}display: none;{/if}">
+					<p>{if $config['img_tips_mode'] <= 2}{$tipsArr[$i]}{/if}</p>
+				</div>
+				<div class="loadding"><i></i><span>{lang img_album:loading1}</span></div>
+				<img src="{if $i < 5}{$img[origPath]}{else}source/plugin/img_album/img/loading.gif{/if}"  alt="{if empty($img['alt'])} {$subject} {else} {$img['alt']} {/if}"  miku-thumbimg-src="{$img[thumbPath]}" miku-origimg-src="{$img['origPath']}" alt="" noerror="true"  />
+			</li>
+		<!--{/loop}-->
+			<li class="end" style="-webkit-transform:translate3d(2000px,0,0);">
+				<div>{lang img_album:lastpage}</div>
+			</li>
+		</ul>
+	</div>
+	<!-- 查看大图 -->
+	<div id="miku_img_album_mask_{$pid}" class="miku_img_album_mask" style="top:9999px">
+
+		<div class="img-block">
+			<div class="img_album_solider">
+				<div class="img_album_solider_wrap">
+					<!--{loop $imgArr $i $img}-->
+					<div class="img_album_sitem">
+						<div class="img_album_zoom">
+							<img style="opacity: 1;" src="{if $i < 2}{$img[origPath]}{else}source/plugin/img_album/img/imgplaceholder.png{/if}"  alt="{if empty($img['alt'])} {$subject} {else} {$img['alt']} {/if}"  miku-origimg-src="{$img['origPath']}" alt="" noerror="true"  />
+						</div>
+					</div>
+					<!--{/loop}-->
+				</div>
+			</div>
+			<!-- 	
+				<div class="img-wrap">
+					<img style="display:none;"  noerror="true"/>
+				</div>
+				
+			-->
+			<div class="loadding" style="display: none;">
+				<div><i class="iconfont icon-loading"></i><span>{lang img_album:loading2}</span></div>
+			</div> 
+		</div>
+		<div id="miku_img_album_tips_{$pid}" class="tips"><p class="tips-content"></p></div>
+		<div class="img-status"><span></span></div>
+		<div class="controller">
+			<span class="close"><i class="iconfont icon-close"></i></span>
+			<span class="zoom" ><i class="iconfont icon-icon--"></i></span>	  
+		</div>
+	</div>
+
+</div></div>
+<script type="text/javascript" src="source/plugin/img_album/template/touch/img_album_mobile.js?v30"></script>
+<script type="text/javascript" src="source/plugin/img_album/template/touch/lib/iscroll-lite.js?v30"></script>
+<script type="text/javascript" src="source/plugin/img_album/template/touch/lib/swipe.js?v30"></script>
+<script type="text/javascript">
+	miku_img_album_touch({
+		'pid':{$pid} ,
+		'imgNum':{$imgNum},
+		'showStyle':{$config['mobile_height_mode']},
+		'heightPercent':{$tuceAttr['height']},
+		'minHeight':{$tuceAttr['min_height']}
+	});
+</script>
+<!--{/block}-->

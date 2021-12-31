@@ -1,0 +1,122 @@
+<!--{block img_album_str}--> 
+<link rel="stylesheet" type="text/css" href="source/plugin/img_album/img/img_album.css?v30"/>
+<link rel="stylesheet" type="text/css" href="source/plugin/img_album/font/pc/iconfont.css?v30"/>
+
+<div id="miku_img_album"  style="width:{$tuceAttr[width]}px;border-color:{$config[bdcolor]};background-color:{$config[bgcolor]}" >
+<div id="miku_img_album_{$pid}">
+	<!-- 工具栏 -->
+	<div id="miku_img_album_tool_{$pid}"  class="tools" style="{if $config[play_mode] != 1}display: none;{/if}">
+		<span class="zoom-btn"  title="{lang img_album:show_img}"></span>
+		<span class="tool-btn" style="{if $config[play_mode] == 2}display: none;{/if}">
+			<span class="img_num">
+				<em class="num_cur">1</em>/<em class="num_total">{$total}</em>
+			</span>
+			<span class="img-btn">	
+				<span class="tool-prev" title="{lang img_album:prev_page1}" ></span>
+
+				<!-- {if $config[play_mode] == 1} -->
+					<span class="play-btn pause"  title="{lang img_album:tip_pause}"></span>
+				<!-- {else} -->
+					<span class="play-btn play" title="{lang img_album:tip_play}"></span>
+				<!-- {/if} -->
+
+				<span class="tool-next" title="{lang img_album:next_page1}"></span>
+			</span>
+		</span>
+	</div>
+	<!-- 大图开始 -->
+	<div id="miku_img_album_big_img_block_{$pid}" class="big_img_block" style="width:{$tuceAttr[width]}px;{if $config[height_mode] ==1 }height:{$tuceAttr[b_height]}px;{/if} text-align:center;">
+		<span id="miku_img_album_prev_{$pid}" class="prev"><img src="static/image/common/emp.gif" alt="{lang img_album:prev_page1}">
+		</span>
+		<span id="miku_img_album_next_{$pid}" class="next"><img src="static/image/common/emp.gif" alt="{lang img_album:next_page1}">
+		</span>
+
+		<a href="javascript:;" style="font-size:0px;text-decoration: none;display: block;">
+
+	    	<img id="miku_img_album_big_img_{$pid}" style="cursor:pointer;" src="{$imgList[0]['origPath']}" alt="{$imgList[0]['alt']}" onclick="zoom(this,this.src,0,0,0)" />
+		</a>
+
+		<div id="miku_img_album_tip_{$pid}"  class="img-tips" style="display:{if empty($tipsList[0])}none;{else}block;{/if}">
+			<div id="miku_img_album_tip_notice_{$pid}" class="notice" style="display: none;"><span> {lang img_album:show_all} </span></div>
+			<p id="miku_img_album_tip_content_{$pid}" class="tips_content">
+			<!--{if empty($tipsList[0])}-->{$tipsList[0]}<!--{/if}-->
+			</p>
+			<span id="miku_img_album_tip_close_{$pid}" class="close-hide" title="{lang img_album:tip_hide}"></span>
+			<span id="miku_img_album_tip_open_{$pid}" class="open-hide" title="{lang img_album:tip_show}">{lang img_album:show_tip}</span>
+		</div>
+		<div id="miku_img_album_tip_dialog_{$pid}" class="img_tips_dialog" style="display: none;"><p></p><span id="miku_img_album_tip_dialog_close_{$pid}" class="dialog_close">{lang img_album:close}</span></div>
+		
+
+		<div id="miku_img_album_loading_{$pid}" class="loading" style="display: none;"><img src="source/plugin/img_album/img/loading.gif" alt="{lang img_album:loading}"></div>
+		<div id="miku_img_album_msg_{$pid}" class="popout-msg" style="display: none;"></div>
+	</div>
+
+	<!-- 小图列表开始 -->
+	<!--{eval $small_div_width = $tuceAttr[width] - $tuceAttr[s_btn_width];}-->
+	<!--{eval $small_div_height = $tuceAttr[s_height] + 8;}-->
+	<!--{eval $small_btn_width = $tuceAttr[s_btn_width]/2;}-->
+	<style type="text/css">
+		#miku_img_album .sm_prev, #miku_img_album .sm_next{
+			width:{$small_btn_width}px;
+			top:{$tuceAttr[s_margin_vertical]}px;
+			height: {$tuceAttr[s_height]}px;
+		}
+		.sm_prev span, .sm_next span{
+			line-height: {$tuceAttr[s_height]}px;
+			background-color:{$tuceAttr[s_btn_bgcolor]};
+			color:{$tuceAttr[s_btn_color]};
+			border-radius:2px;
+		}
+		#miku_img_album .img_album_border{
+			border-color: {$tuceAttr[s_active_color]};
+		}
+		#miku_img_album .sm_img_block_bgcolor{background-color: {$tuceAttr[s_bgcolor]};}
+	</style>
+	<div class="sm_img_block_bgcolor" style="width:{$tuceAttr[width]}px; padding:{$tuceAttr[s_margin_vertical]}px 0;">
+		<a id="miku_img_album_sm_prev_{$pid}" class="sm_prev" href="javascript:;"><span><i class="miku_imgalbumfont">&#xe750;</i></span></a>
+		<a id="miku_img_album_sm_next_{$pid}" class="sm_next" href="javascript:;"><span><i class="miku_imgalbumfont">&#xe751;</i></span></a>
+		<div id="miku_img_album_sm_img_block_{$pid}" class="sm_img_block" style="height:{$tuceAttr[s_height]}px;width:{$small_div_width}px; ">
+			<!--{eval $small_ul_width = ($tuceAttr[s_width] + $tuceAttr[s_margin]*2 + 10) * $total;}-->
+			<ul id="miku_img_album_sm_img_list_{$pid}" class="sm_img_list" style="height:{$tuceAttr[s_height]}px;width:{$small_ul_width}px;">
+			<!--{eval $http_img_id = array();}-->
+			<!--{loop $imgList $i $img}-->
+				<!--{if $i == 0}-->
+					<li class="img_album_active" style="width:{$tuceAttr[s_width]}px;height:{$tuceAttr[s_height]}px;margin:0 {$tuceAttr[s_margin]}px;">
+
+				<!--{else}-->
+					<li style="width:{$tuceAttr[s_width]}px;height:{$tuceAttr[s_height]}px;margin:0 {$tuceAttr[s_margin]}px;">
+				<!--{/if}-->
+				<!--{if !$img['is_attachimg']}-->
+					<!--{eval $http_img_id[] = $i;}-->
+				<!--{/if}-->
+					<img  id="miku_img_album_sm_img_{$pid}_{$i}" src="{if $i < $tuceAttr[s_size]}{$img[thumbPath]}{else}source/plugin/img_album/img/loading.gif{/if}" alt="{$img['alt']}" style="cursor:pointer;" onload="javascript:this.parentNode.style.backgroundImage='none';" onerror="javascript:this.onerror=null;this.src='source/plugin/img_album/img/nopic.gif';this.width='{$tuceAttr[s_width]}';this.height={$tuceAttr[s_height]}" width="100%"/>
+					<!--{eval $imgNum = $i+1;}-->
+					<span class="img_number" >&nbsp;{$imgNum}/{$total}&nbsp;</span>
+					<span class="img_album_border"></span>
+				</li>
+			<!--{/loop}-->
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+{eval $remoteImg = empty($http_img_id) ? 0 : implode(',', $http_img_id);}
+<script src="source/plugin/img_album/template/img_album.js?v30" type="text/javascript"></script>
+<script type="text/javascript">
+	var miku_img_album_lang = {
+		"is_first_page":"{lang img_album:is_first_page}", 
+		"tip_play":"{lang img_album:tip_play}", 
+		"tip_pause":"{lang img_album:tip_pause}", 
+		"prev_page":"{lang img_album:prev_page1}",
+		"next_page":"{lang img_album:next_page1}",
+		"close":"{lang img_album:close}",
+		"zoom_by_mousewheel":"{lang img_album:zoom_by_mousewheel}",
+		"zoom_100":"{lang img_album:zoom_100}",
+		"open_innew":"{lang img_album:open_innew}"
+	};
+	var miku_img_album_cfg = {'pid': $pid, 'img_total':$total, 'height_mode':{$config[height_mode]}, 'play_mode':{$config[play_mode]}, 'play_time':{$config[play_time]}, 'transform_speeds': $config[transform_speeds],  'tuce_width_px':$tuceAttr[width], 'tuce_height_px':$tuceAttr[height_px],  'tuce_grid_num':$tuceAttr[s_size], 'big_img_height':$tuceAttr[b_height], 'big_img_min_height':$tuceAttr[min_height], 'sm_img_width':$tuceAttr[s_width], 'sm_img_height':$tuceAttr[s_height],'sm_img_margin':$tuceAttr[s_margin]*2};
+
+	var miku_img_album_{$pid} = miku_img_album(miku_img_album_cfg, miku_img_album_lang, $img_info_json, $tips_arr_json,  [$remoteImg]); 
+</script>
+<!--{/block}-->

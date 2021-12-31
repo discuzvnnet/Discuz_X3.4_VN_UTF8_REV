@@ -1,0 +1,56 @@
+@font-face {font-family: "miku_img_album";
+  src: url('iconfont.eot?t=1616381248258'); /* IE9 */
+  src: url('iconfont.eot?t=1616381248258#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAASgAAsAAAAAC0QAAARQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCEDgqHKIVSATYCJAMsCxgABCAFhTUHgTwbjgkRVZxNyb7AtpGPbVk3pmSggUhtg3PgONQD3RreHTQAAAAAIHj+Xfu8L8kMn8yyYnbQypk9lUgKhQSSRAvoC8LWs0bK12UZHoD72VslpuDXRdtwNNsuWqA5qugI7wQ6ACbWOdBJCMXXoSayPq5PLbO1bc1V5T2gUBHmUJ598mi7lAVKJ80+/M/9Xn1pPwUu/QL9iq+DftWii4YDTNzx6CLbwEYT95nENs7KPdWTTq+HgFS7UdKbGwwlGbSbAFk+OTeW9LhMRFDERsgcG0W2CcThy+oFuGn8vPwThAigBBFo363H+tNarrHm1Rf9RQ5qCFxxCeByEmgwCgxki01dRFv1o7T09TnGTpCLKearyQlc2V373uY9x3Z8V3JXv7d6RPonnshZdRo0Ac0IhCKxREooSBxJzUFeUtKh5JQwNBwnDAPHDyOAE9DvNK6EMCK4chgx3DGMBO4URoqaJwxBzeuigGd6S4Ma/0sb5E5VJk1VBi/0An2CpTc3n5nnpI4ezDie+QMvszjnZ5eOXO/C8CInNX/l+XwMg/oD6YXqTHUcWZNmxcCug+D8QWlmpoBq7fBu4Do62XiHCUDtFjFmeW26Zv7egZcACR/9aM5zAvOHJw8LPDxygwvDdsQH6NTKsFgj1Ak83HpmTfZR9tfp3HvxXnUXgZ/XqxXo82q5clcNCFbnNFfty5VrUPXrgefz6QSJYCUoBj+vLhlficsXO+3OJNlV7EoSq+ZFWVSfj70/Ve/CqHwUKMKDVVHZxU5Pftenz59QoDqKEnrKovbT589VkQel0Fj4LgqPFLmfd9nM0eUljbwz2UgoJV+/i/MtUc5cXKdMK1TS/Cmsz/0F8r32x9+ftsNq4qXdHdCsZVi2hqnP1zhZEw88rSOHT2XP2+3IqBLs7vYiQ0x9HC+LnkbT+HgSOuISFz4D/Eb36wH8Tg8ZIaAz6hRR8qo38lJ6ECMQ4396UDf+IgQEU4G/HCk2/02SDQDvJ/02qeQ3hmr0ePmnBf9JLuEM8xaILWJKlEEIyIwWzGhyKubBfzLX4GPxenPiziCsZgeUSA9o1jBqyGkIZOYgZG2D1IgjJ2caXUGTaAIM25BAtHoMivUNtFY/EeMNUSHQEtLIIUfaILVbDpwz0x8SvF92GbWgA/MPyVL38m+Ry5bKmFMLs65mtHcMo2r+jOH5jm/kNVGH4/hkaNMbduSiD1h/wknEg2dq8FrKzbBWgoUpo5VdFFnO+4lj3BftLLXp0hOjFnRg/iFZ6l7bWC61VMZsBFs4SFcz2jsGa/VVc6IJ862/kdcLU93aw3F3SIy+qT3DmE1/yfoTTiIePFOD184ksKKeYOG3ymhlFzPULue9mMsnVXeDoreZzFwmQJ9ADinRYiSQUCKJJZFUMsnZTKRvK3q5MA/kFKI86B4qbh0NozP87McAG4O4Yh3ikknU7tJqRnkQV2xkx2sb8YepEuPGxYY70wQAAAA=') format('woff2'),
+  url('iconfont.woff?t=1616381248258') format('woff'),
+  url('iconfont.ttf?t=1616381248258') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1616381248258#miku_img_album') format('svg'); /* iOS 4.1- */
+}
+
+.miku_imgalbumfont {
+  font-family: "miku_img_album" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-btn-left:before {
+  content: "\e750";
+}
+
+.icon-btn-right:before {
+  content: "\e751";
+}
+
+.icon-angle-double-left:before {
+  content: "\e613";
+}
+
+.icon-angle-double-right:before {
+  content: "\e614";
+}
+
+.icon-angle-right:before {
+  content: "\e617";
+}
+
+.icon-angle-left:before {
+  content: "\e618";
+}
+
+.icon-caret-left:before {
+  content: "\e66c";
+}
+
+.icon-caret-right:before {
+  content: "\e66d";
+}
+
+.icon-chevron-left:before {
+  content: "\e68b";
+}
+
+.icon-chevron-right:before {
+  content: "\e68c";
+}
+

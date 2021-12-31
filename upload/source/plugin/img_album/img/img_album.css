@@ -1,0 +1,123 @@
+.b1r #miku_img_album_btn{background: url("tu24.gif") no-repeat scroll center 1px transparent;}
+.b2r #miku_img_album_btn{background: url("tu16.gif") no-repeat scroll center 1px transparent;}
+#miku_img_album *{margin:0;padding:0;list-style-type:none;outline: none;}
+#miku_img_album{border-radius: 3px;font-weight:normal; border:1px solid transparent; margin:10px auto; position:relative;overflow:hidden;}
+#miku_img_album .tools{width: 100%;height: 32px;top:0px; right:0px; position: absolute;z-index: 100;}
+#miku_img_album .tools .zoom-btn{position: absolute; width: 32px; height: 32px; right:0; top:0; background: url(zoom.png) no-repeat center center; cursor: pointer; opacity:0.4;filter:alpha(opacity=20);transition: opacity 0.4s; border-bottom-left-radius: 8px; transition: opacity 1s; }
+#miku_img_album .tools .zoom-btn:hover{opacity:0.7;filter:alpha(opacity=70); }
+#miku_img_album .tools .tool-btn{position: absolute; top: 10px; left: 50%; z-index: 2; margin-left: -84px; width: 166px; height: 30px; border:1px solid #c5b9b6; background:url(bg.png); opacity:0.9;filter:alpha(opacity=90); transition: opacity 1s; }
+#miku_img_album .tools .tool-btn:hover{opacity:1;filter:alpha(opacity=100); } 
+#miku_img_album .tools .tool-btn .img-btn{float: left; width: 80px; padding: 6px 0 0 10px; }
+#miku_img_album .tools .tool-btn .tool-prev{display: inline-block; background: url(play.png); background-position: -5px -5px; margin-right: 8px; width: 10px; height: 20px; cursor: pointer; opacity:0.7;filter:alpha(opacity=70); }
+#miku_img_album .tools .tool-btn .play-btn{margin-right: 8px; display: inline-block; background: url(play.png); width: 20px; height: 20px; cursor: pointer; opacity:0.85;filter:alpha(opacity=85); }
+#miku_img_album .tools .tool-btn .play{background-position: -34px -4px; }
+#miku_img_album .tools .tool-btn .pause{background-position: -56px -4px; opacity:0.9;filter:alpha(opacity=90); }
+#miku_img_album .tools .tool-btn .tool-next{display: inline-block; background: url(play.png); background-position: -20px -5px; width: 10px; height: 20px; margin-right: 8px; cursor: pointer; opacity:0.7;filter:alpha(opacity=70); }
+#miku_img_album .tools .tool-btn .img_num{font-family: Tahoma; float: left; width: 60px; padding: 0 5px; text-align: right; color: #fff; line-height: 30px; }
+#miku_img_album .tools .tool-btn .num_cur{font-size: 18px; margin: 0 2px; color: #fff; }
+#miku_img_album .tools .img_num .num_total{font-size: 14px; color: #fff; }
+#miku_img_album .tools .prev:hover{opacity:1;filter:alpha(opacity=100);}
+#miku_img_album .tools .play-btn:hover{opacity:1;filter:alpha(opacity=100);}
+#miku_img_album .tools .next:hover{opacity:1;filter:alpha(opacity=100);}
+#miku_img_album .prev{display:block;width:50%; height:100%; position:absolute;left:0;z-index:99;overflow:hidden;opacity: 0.1; filter:alpha(opacity=10);transition: opacity 1s;cursor: url("../../../../source/plugin/img_album/img/cursor_left.cur"),pointer;/*cursor:url("../../../../source/plugin/img_album/img/arr_left.cur"),pointer;*/}
+#miku_img_album .prev:hover{background:url("prevBtnTop.png") no-repeat 0 50%; opacity:1; filter:alpha(opacity=100); _filter:alpha(opacity=80);}
+#miku_img_album .prev img{width:100%;height:100%;}
+#miku_img_album .next{display:block;width:50%; height:100%; position:absolute;right:0;z-index:99;overflow:hidden;opacity: 0.1; filter:alpha(opacity=10);transition: opacity 1s; cursor:url("../../../../source/plugin/img_album/img/cursor_right.cur"),pointer;/*cursor:url("../../../../source/plugin/img_album/img/arr_right.cur"),pointer;*/}
+#miku_img_album .next:hover{background:url("nextBtnTop.png") no-repeat 100% 50%; opacity:1; filter:alpha(opacity=100); _filter:alpha(opacity=80);}
+#miku_img_album .next img{width:100%;height:100%;}
+#miku_img_album .big_img_block{overflow:hidden;padding-bottom:0px; position: relative;border-bottom: 1px solid #FAFAFA; }
+#miku_img_album .big_img_block .loading{width: 100px;height: 70px;text-align: center;line-height:50px;vertical-align: middle ; position: absolute;z-index: 10;left:50%;top:50%;margin-top:-35px;margin-left:-50px;opacity: 0.4; filter:alpha(opacity=40);}
+#miku_img_album .big_img_block .popout-msg{position:absolute ;left:50%; top:50%;margin-top:-25px;margin-left:-110px; width: 200px;font-family:'Microsoft YaHei','SimSun'; font-size:18px;color:#FFF;line-height: 52px; padding:0 10px; background: url(font_bg.png);}
+#miku_img_album .img-tips{padding-top:4px;padding-bottom:3px; width: 100%; height: 20px; position: absolute;left: 0;bottom: 0px; z-index:99;background: url(tips_bg.png); _overflow:hidden;_filter:alpha(opacity=80);}
+#miku_img_album .img-tips .tips_content{ font-size:14px; text-indent:14px; padding:0 9px;text-align:left; line-height:22px; color:#fff; cursor: default;}
+#miku_img_album .img-tips .close{display:block; position: absolute; right:1px; bottom:2px; height:13px; width:13px; background: url(close.png) center center no-repeat; overflow: hidden; opacity: 0.7; filter:alpha(opacity=70); cursor: pointer;*height:16px;}
+#miku_img_album .img-tips .close-hide{display:none; }
+#miku_img_album .img-tips .close:hover{opacity: 1; filter: alpha(opacity=100);}
+#miku_img_album .img-tips .open{display:block; position: absolute; right:-70px; bottom: 0;padding:5px 10px; border:1px solid #E0E0E0; border-radius:2px;color:#EEE;font-family:simsun; font-size:12px;background: url(font_bg.png);cursor: pointer; opacity:0.8;filter:alpha(opacity=80);transition: opacity 0.5s;}
+#miku_img_album .img-tips .open-hide{display:none;}
+#miku_img_album .img-tips .open:hover{opacity:1;filter:alpha(opacity=100);}
+#miku_img_album .img-tips .notice{position: absolute;bottom: 0px;left:0;color:#A70000;background: #7F7F7F;text-align:right;width: 100%;}
+#miku_img_album .img-tips .notice i{line-height:14px;color:#fff;}
+#miku_img_album .img-tips .notice span{line-height:25px;border:1px solid #FFF;background-color: #F26920;color:#fff;padding:0 10px; cursor: pointer;margin-right: 34px;}
+#miku_img_album .sm_img_block_bgcolor{position: relative; background:#F2F2F2;border-top:1px solid #E0E0E0;border-bottom:1px solid #E0E0E0;}
+#miku_img_album .sm_prev{position:absolute;left:0; z-index:99;cursor:pointer;opacity: 1; filter:alpha(opacity=100);transition: opacity 1s;overflow: hidden;}
+#miku_img_album .sm_next{position:absolute;right:0; z-index:99;cursor:pointer;text-align:right!important;opacity: 1; filter:alpha(opacity=100);transition: opacity 1s;overflow: hidden;}
+#miku_img_album .sm_prev:hover{opacity: 0.8; filter:alpha(opacity=80);}
+#miku_img_album .sm_next:hover{opacity: 0.8; filter:alpha(opacity=80);}
+#miku_img_album .sm_img_block{overflow:hidden; margin:0 auto; position:relative;}
+#miku_img_album .sm_img_list{overflow:hidden; position:absolute;left:0;bottom:0px; _margin-left:-3px;}
+#miku_img_album .sm_img_list li{ overflow:hidden;float:left;text-align:center;position:relative;cursor:pointer;background-color:#FEFEFE;background-image:url(loading.gif);background-repeat:no-repeat; background-position: center center;border-radius: 3px;}
+#miku_img_album .img_number{background: url(font_bg.png);border-radius: 5px 0 0 0; position:absolute;right:2px;bottom:2px;color:#FFF;font:12px/1.5 Tahoma,Helvetica,'SimSun',sans-serif;}
+#miku_img_album .img_album_border{box-sizing:border-box; display:none; position: absolute;top:0;left:0;width: 100%;height:100%;border: 4px solid #3EA1EC;}
+#miku_img_album .img_album_active .img_album_border{display:block;}
+#miku_img_album .sm_prev span, #miku_img_album .sm_next span{display: inline-block; width: 100%; height: 100%; font-style: normal; text-align:center!important;}
+#miku_img_album .sm_prev .miku_imgalbumfont, #miku_img_album .sm_next .miku_imgalbumfont{display: inline-block; width: 100%; height: 100%; font-style: normal; font-size: 12px;text-align:center;}
+#miku_img_album .sm_prev .miku_imgalbumfont{position:relative;top:0px; left:0px;}
+#miku_img_album .sm_next .miku_imgalbumfont{position:relative;top:0px; left:1px;}
+#miku_img_album .img_tips_dialog{position:absolute;bottom:0; left:0;z-index:101;width: 100%; height:200px; background-color: #4C4C4C;color: #fff;}
+#miku_img_album .img_tips_dialog p{border:1px solid #FFF;background-color: #f2f2f2;color:#666;;margin:5px 5px 30px 5px;height: 160px;text-align:left;text-indent:2em;padding:0 3px 0 10px;overflow-y:auto;}
+#miku_img_album .img_tips_dialog span{position: absolute;right: 34px; bottom: 4px;color: #FFF; font-size:14px;font-weight:700;}
+#miku_img_album .img_tips_dialog .dialog_close{line-height:25px;border:1px solid #FFF;background-color: #F26920;color:#fff;padding:0 10px; cursor: pointer;}
+.miku_img_album_z_index{z-index:100;}
+#imgzoom_parent{
+	width: 100%;
+	height: 100%;
+}
+
+.miku_zimg_tools{
+	position: fixed;
+	z-index: 802;
+	bottom: 50px;
+	left:50%;
+	margin-left:-198px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #c0c0c0;
+    text-align: center;
+    background-color: rgba(55,55,55,.8);
+    filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+	padding: 2px 30px;
+	cursor: default;
+
+}
+.miku_zimg_btn{
+	font-family: Arial, "Microsoft Yahei", Helvetica, sans-serif;
+	display: inline-block;
+	cursor: pointer;
+	padding: 0 5px;
+	color:#fff;
+}
+.miku_zimg_btn i{
+	position: relative;
+	top:3px;
+	font-size: 24px;
+}
+.miku_zimg_btn:hover{
+	color:#77c34f;
+}
+.miku_zimg_num{
+	position: relative;
+	top:3px;
+	left: -4px;
+	padding: 0 10px;
+	font-family: "Tahoma","Times New Roman",Times,serif;
+	font-family: "Times New Roman",Times,serif;
+	display: inline-block;
+	min-width: 100px;
+	font-size: 22px;
+}
+.miku_zimg_num span{
+	position: relative;
+	top:-3px;
+	left: 0px;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 40px;
+	min-width: 25px;
+	text-align: center;
+	/*color:#fff8e1;*/
+}
