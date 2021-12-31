@@ -13,7 +13,7 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'polllist_name' => '​​Danh sách thăm dò',
+	'polllist_name' => 'Danh sách thăm dò',
 	'polllist_desc' => 'Gọi cho danh sách thăm dò',
 	'polllist_uids' => 'IDs thành viên',
 	'polllist_uids_comment' => 'Xin vui lòng điền vào ID người dùng cụ thể (uid), sử dụng dấu phẩy (,) để ngăn cách nhiều thành viên.',
