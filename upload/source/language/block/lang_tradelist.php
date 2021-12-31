@@ -92,7 +92,7 @@ $lang = array
 	'tradelist_orderby_monthstart' => 'Bắt đầu trong tháng',
 	'tradelist_orderby_weekexp' => 'Tuần hết hạn',
 	'tradelist_orderby_monthexp' => 'Tháng hết hạn',
-	'tradelist_highlight' => 'Đánh dấu những từ được tìm thấy',
+	'tradelist_highlight' => 'Highlight',
 );
 
 ?>
