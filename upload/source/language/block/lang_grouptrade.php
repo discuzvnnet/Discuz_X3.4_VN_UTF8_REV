@@ -98,7 +98,7 @@ $lang = array
 	'grouptrade_gviewperm_nolimit' => 'Không giới hạn',
 	'grouptrade_gviewperm_only_member' => 'Chỉ thành viên',
 	'grouptrade_gviewperm_all_member' => 'Tất cả',
-	'grouptrade_highlight' => 'Đánh dấu những từ được tìm thấy',
+	'grouptrade_highlight' => 'Highlight',
 );
 
 ?>
