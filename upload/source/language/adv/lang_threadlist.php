@@ -25,7 +25,7 @@ $lang = array
 	'threadlist_mode_comment' => 'Chế độ miễn phí, lấy danh sách đầy đủ các chủ đề thể hiện chiều rộng cột quảng cáo<br />Chủ đề, các quảng cáo được thực hiện vào một chủ đề, nhấp chuột vào quảng cáo của bạn để chuyển đến một chủ đề cụ thể',
 	'threadlist_mode_0' => 'Chế độ miễn phí',
 	'threadlist_mode_1' => 'Chế độ chủ đề',
-	'threadlist_tid' => 'Số tid của chủ để chỉ định',
+	'threadlist_tid' => 'Số ID của chủ để chỉ định',
 	'threadlist_threadurl' => 'URL chủ đề đích',
 	'threadlist_threadurl_comment' => 'URL của chủ để khi bấm vào quảng cáo',
 );
