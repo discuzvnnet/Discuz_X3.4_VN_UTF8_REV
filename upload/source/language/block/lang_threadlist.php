@@ -110,7 +110,7 @@ $lang = array
 	'threadlist_orderby_monthstart' => 'Bắt đầu trong tháng',
 	'threadlist_orderby_weekexp' => 'Hạn chế trong tuần',
 	'threadlist_orderby_monthexp' => 'Hạn chế trong tháng',
-	'threadlist_highlight' => 'Đánh dấu những từ được tìm thấy',
+	'threadlist_highlight' => 'Highlight',
 );
 
 ?>
