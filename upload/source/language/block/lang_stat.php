@@ -43,6 +43,6 @@ $lang = array
 	'stat_blogs' => 'Blogs',
 	'stat_albums' => 'Albums',
 	'stat_pics' => 'Hình ảnh',
-	'stat_shares' => 'Chia sẻs',
+	'stat_shares' => 'Chia sẻ',
 );
 ?>
