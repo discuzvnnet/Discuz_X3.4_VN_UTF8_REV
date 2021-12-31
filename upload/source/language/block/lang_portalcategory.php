@@ -13,7 +13,7 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'portalcategory_thecatid' => 'Loại Portal',
+	'portalcategory_thecatid' => 'Loại tin tức',
 	'portalcategory_thecatid_comment' => 'Thiết lập ID thể loại riêng biệt, nếu nhiều ID thì ngăn cách bằng dấu phẩy (,)',
 	'portalcategory_catid' => 'Loại chuyên mục nguồn',
 	'portalcategory_catid_comment' => 'Chọn chuyên mục nguồn',
