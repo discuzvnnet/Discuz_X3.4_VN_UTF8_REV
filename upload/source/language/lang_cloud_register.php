@@ -15,7 +15,7 @@ $lang = array
 (
 	'bindqq' => 'Bạn cần phải mở ứng dụng tài khoản QQ',
 	'bindqq_link' => '<a href="javascript:;" class="lightlink" onclick="BindQQ()"><b>QQ</b></a>',
-	'back' => 'Click vào đây để trở về trước',
+	'back' => 'Nhấn vào đây để trở về trước',
 );
 
 ?>
