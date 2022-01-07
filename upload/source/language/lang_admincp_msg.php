@@ -469,6 +469,7 @@ $lang = array (
   'uc_database_connect_error' => 'Không kết nối được với máy chủ cơ sở dữ liệu trung tâm người dùng. Kiểm tra cài đặt',
   'uc_config_write_error' => 'Không thể ghi tệp cấu hình, vui lòng kiểm tra cài đặt',
   'uc_config_appid_error' => 'ID ứng dụng UCenter phải là một số, vui lòng kiểm tra cài đặt',
+  'uc_config_ip_error' => 'Địa chỉ IP UCenter phải là địa chỉ IP hợp lệ, vui lòng kiểm tra lại cài đặt của bạn.',
   'uc_config_load_data_local_infile_error' => 'Máy chủ đã bật chức năng MySQL LOAD DATA LOCAL IN FILE . Để tránh các mối đe dọa bảo mật có thể xảy ra, không được phép chỉnh sửa trực tuyến địa chỉ máy chủ cơ sở dữ liệu UCenter. Nếu bạn cần sửa đổi, vui lòng chỉnh sửa hằng số UC_DBHOST trong config/config_ucenter.php',
   'setting_ipaccess_invalid' => 'Lỗi hoạt động! Bạn phải thêm IP của mình vào danh sách các IP được phép truy cập trang web',
   'setting_adminipaccess_invalid' => 'Lỗi hoạt động! Bạn phải thêm IP của mình vào danh sách các IP được phép truy cập nền',
