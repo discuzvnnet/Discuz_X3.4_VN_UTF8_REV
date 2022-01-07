@@ -13,7 +13,7 @@ if(!defined('IN_DISCUZ')) {
 
 $lang = array
 (
-	'couplebanner_name' => 'Nổi 2 bên',
+	'couplebanner_name' => 'Dọc 2 bên',
 	'couplebanner_desc' => 'Hiển thị: Dọc 2 bên diễn đàn. Chú ý: Chỉ sử dụng cho các loại màn hình lớn ( tối thiếu 1024x768), độ rộng diễn đàn không được quá 90%.',
 	'couplebanner_index' => 'Trang chủ',
 	'couplebanner_fids' => 'Diễn đàn',
