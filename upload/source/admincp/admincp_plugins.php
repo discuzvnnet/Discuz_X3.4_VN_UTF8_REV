@@ -274,9 +274,9 @@ if(!$operation) {
 		} else {
 			$array = false;
 		}
-/*jaideejung007*/		//if(dfsockopen(cloudaddons_url('&from=s').'&mod=app&ac=vali'.'dator&ver=2&addonid='.$addonid.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : ''), 0, '', '', false, CLOUDADDONS_DOWNLOAD_IP, 15) === '0') {
-/*jaideejung007*/			//$available = 0;
-/*jaideejung007*/		//}
+		//if(dfsockopen(cloudaddons_url('&from=s').'&mod=app&ac=vali'.'dator&ver=2&addonid='.$addonid.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : ''), 0, '', '', false, CLOUDADDONS_DOWNLOAD_IP, 15) === '0') {
+			//$available = 0;
+		//}
 		if($exists) {
 			$plugins = array();
 			foreach(C::t('common_plugin')->fetch_all_by_identifier(array_keys($exists)) as $plugin) {
@@ -415,9 +415,9 @@ if(!$operation) {
 			}
 			$addonid = $dir.'.plugin';
 			$array = cloudaddons_getmd5($addonid);
-/*jaideejung007*/			//if(cloudaddons_open('&mod=app&ac=validator&ver=2&addonid='.$addonid.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : '')) === '0') {
-/*jaideejung007*/				//cpmsg('c'.'lou'.'dad'.'dons'.'_genu'.'ine_m'.'essa'.'ge', '', 'error', array('addonid' => $addonid));
-/*jaideejung007*/			//}
+			//if(cloudaddons_open('&mod=app&ac=validator&ver=2&addonid='.$addonid.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : '')) === '0') {
+				//cpmsg('c'.'lou'.'dad'.'dons'.'_genu'.'ine_m'.'essa'.'ge', '', 'error', array('addonid' => $addonid));
+			//}
 		}
 
 		if(!ispluginkey($pluginarray['plugin']['identifier'])) {
@@ -637,7 +637,7 @@ if(!$operation) {
 		pluginupgrade($pluginarray, $installtype);
 
 		if(!empty($plugin['directory']) && !empty($pluginarray['upgradefile']) && preg_match('/^[\w\.]+$/', $pluginarray['upgradefile'])) {
-			dheader('location: '.ADMINSCRIPT.'?action=plugins&operation=pluginupgrade&dir='.$dir.'&installtype='.$modules['extra']['installtype'].'&fromversion='.$plugin['version']);
+			dheader('location: '.ADMINSCRIPT.'?action=plugins&operation=pluginupgrade&dir='.$dir.'&installtype='.$installtype.'&fromversion='.$plugin['version']);
 		}
 		$toversion = $pluginarray['plugin']['version'];
 
