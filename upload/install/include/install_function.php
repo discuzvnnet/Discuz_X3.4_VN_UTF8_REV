@@ -134,7 +134,7 @@ function env_check(&$env_items) {
 		if($key == 'php') {
 			$env_items[$key]['current'] = PHP_VERSION;
 		} elseif($key == 'attachmentupload') {
-			$env_items[$key]['current'] = @ini_get('file_uploads') ? ini_get('upload_max_filesize') : 'unknow';
+			$env_items[$key]['current'] = @ini_get('file_uploads') ? (min(min(ini_get('upload_max_filesize'), ini_get('post_max_size')), ini_get('memory_limit'))) : 'unknow';
 		} elseif($key == 'gdversion') {
 			$tmp = function_exists('gd_info') ? gd_info() : array();
 			$env_items[$key]['current'] = empty($tmp['GD Version']) ? 'noext' : $tmp['GD Version'];
@@ -464,7 +464,7 @@ function cloudaddons_getversion($instid) {
 	$param .= '&md5hash='.substr(md5($data.$timestamp), 8, 8).'&timestamp='.$timestamp;
 	$param .= '&mod=app&ac=installcheck';
 
-	$url = 'https://logs.discuzthai.com/index.php?'.$param; /*jaideejung007*/
+	$url = 'https://addon.dismall.com/index.php?'.$param;
 
 	$return = dfopen($url, 0, '', '', FALSE, '', 3);
 
@@ -505,7 +505,7 @@ function show_license() {
 
 		$info = cloudaddons_getversion($instid);
 
-		$hrefurl = empty($info['url']) ? 'https://discuzthai.com' : $info['url']; /*jaideejung007*/
+		$hrefurl = empty($info['url']) ? 'https://gitee.com/Discuz/DiscuzX/releases' : $info['url'];
 
 		if($info['is_latest']) {
 			$is_latest = 1;
@@ -1494,6 +1494,10 @@ function buildarray($array, $level = 0, $pre = '$_config') {
 	}
 
 	foreach ($array as $key => $val) {
+		if(!preg_match("/^[a-zA-Z0-9_\x7f-\xff]+$/", $key)) {
+			continue;
+		}
+
 		if($level == 0) {
 			$newline = str_pad('  CONFIG '.strtoupper($key).'  ', 70, '-', STR_PAD_BOTH);
 			$return .= "\r\n// $newline //\r\n";
