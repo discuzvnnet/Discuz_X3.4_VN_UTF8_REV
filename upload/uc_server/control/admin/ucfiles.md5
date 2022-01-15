@@ -12,7 +12,7 @@ ccf267e9dcaf9ff2d315012060a7e1d6 *./lib
 2bdbd8d3dddf47a9dad09787c54c8751 *./model
 f576f07ce12ea5a7bf644f4ad5b235a5 *./plugin
 d093e4cdf86aa6a86a460b237b8b30da *./release
-15dde9868cbc402f19261bd376496d38 *./robots.txt
+daadebe24cc397eaedb16c5aef40a306 *./robots.txt
 1f4899a85658c8e1931ad3b7d43b4560 *./view
 7215ee9c7d9dc229d2921a40e899ec5f *data/avatar/index.htm
 7215ee9c7d9dc229d2921a40e899ec5f *data/backup/index.htm
@@ -21,7 +21,7 @@ d41d8cd98f00b204e9800998ecf8427e *data/cache/index.htm
 7215ee9c7d9dc229d2921a40e899ec5f *data/logs/index.htm
 d41d8cd98f00b204e9800998ecf8427e *data/tmp/index.htm
 d41d8cd98f00b204e9800998ecf8427e *data/view/index.htm
-7265d05db3ce3f4bb3504f7a61a59fc3 *api/dbbak.php
+3c85f10655ccd54a2e5905046966a422 *api/dbbak.php
 d41d8cd98f00b204e9800998ecf8427e *api/index.htm
 90b101dd0e881816c7587f04df2c3db0 *control/admin/admin.php
 7aa86ce6075f58f5afdd5b119cd662c9 *control/admin/app.php
@@ -31,7 +31,7 @@ b5b55c54eb4d74731c01e4c8982042cd *control/admin/credit.php
 c0c8cbc576cb72e129274c887a24676c *control/admin/db.php
 f53e0119b7e5a24c2ac6dfa68913d631 *control/admin/domain.php
 9139008dd986bca1b8f9f203de4fde81 *control/admin/feed.php
-f697e0fec08c84c27f84f22c019d2fae *control/admin/frame.php
+9f729d309b4b4882b9445c5a04684ba8 *control/admin/frame.php
 d41d8cd98f00b204e9800998ecf8427e *control/admin/index.htm
 6970e00023140a42a8101f88c9da08b3 *control/admin/log.php
 85b0228e317d1c458cace7a3478b6426 *control/admin/mail.php
@@ -73,7 +73,7 @@ d7b379d38fbc0e8a120454a334a54499 *model/tag.php
 62f82ccfc82cf4c3bf50e0144eeb6420 *model/user.php
 cdc453e23980b4f7f894a3b15042a76c *model/version.php
 5a6917878f5796f3b1aa2d187275ab01 *lib/db.class.php
-3447cd9f54a06b5cbcd535e24667db3b *lib/dbi.class.php
+10427c5821be21ffea3129035acab8d5 *lib/dbi.class.php
 7215ee9c7d9dc229d2921a40e899ec5f *lib/index.htm
 af8a06b22ccba3bf90c4cc3d68b08975 *lib/seccode.class.php
 d4fbe5acd2ebfd7d4fd42ecaaccdcdf0 *lib/sendmail.inc.php
@@ -224,6 +224,6 @@ cfcf3bb6aeff9a878f5bf8061f19a707 *view/default/pm_blackls.htm
 78cfbfb3fadc76e11e449f2a0ffbf8c0 *view/default/pm_nav.htm
 2c71a1f8a58da016cb293ef68ce5a4c0 *view/default/pm_send.htm
 1dcfb1c220e5381901fa44b300b234bd *view/default/pm_view.htm
-6ffe7f0edffe37aa70ca7534ec014b56 *view/default/templates.lang.php
+c384531f5372689ecda43e77a45e5b69 *view/default/templates.lang.php
 42fa0f40e601b24e3dbdd91ac05ce696 *view/default/user_avatar.htm
 7215ee9c7d9dc229d2921a40e899ec5f *view/index.htm

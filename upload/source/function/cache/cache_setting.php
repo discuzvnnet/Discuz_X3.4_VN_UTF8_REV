@@ -196,8 +196,7 @@ function build_cache_setting() {
 
 	include_once DISCUZ_ROOT.'./source/discuz_version.php';
 	$_G['setting']['version'] = $data['version'] = DISCUZ_VERSION;
-/*jaideejung007*/	$_G['setting']['release'] = $data['release'] = DISCUZ_RELEASE;
-/*jaideejung007*/	$_G['setting']['th_revision'] = $data['th_revision'] = DISCUZ_TH_REVISION;
+	$_G['setting']['release'] = $data['release'] = DISCUZ_RELEASE;
 
 	$data['sitemessage']['time'] = !empty($data['sitemessage']['time']) ? $data['sitemessage']['time'] * 1000 : 0;
 	foreach (array('register', 'login', 'newthread', 'reply') as $type) {

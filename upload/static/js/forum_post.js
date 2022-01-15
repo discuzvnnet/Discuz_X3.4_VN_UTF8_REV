@@ -28,7 +28,9 @@ var STATUSMSG = {
 	'8' : 'Tập tin đính kèm không thể được lưu',
 	'9' : 'Không có tập tin pháp lý nào được tải lên',
 	'10' : 'Hoạt động bất hợp pháp',
-	'11' : 'Bạn có thể tải lên tập tin đính kèm lớn ngày hôm nay'
+	'11' : 'Bạn có thể tải lên tập tin đính kèm lớn ngày hôm nay',
+	'12' : 'Không thể gửi vì tên tệp chứa các từ nhạy cảm',
+	'13' : 'Hạn chế máy chủ không thể tải lên tệp đính kèm có độ phân giải cao'
 };
 
 EXTRAFUNC['validator'] = [];
