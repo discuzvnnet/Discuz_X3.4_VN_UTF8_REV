@@ -117,7 +117,7 @@ function cloudaddons_removelog($rid) {
 function cloudaddons_validator($addonid) {
 	$array = cloudaddons_getmd5($addonid);
 	if(cloudaddons_open('&mod=app&ac=validator&ver=2&addonid='.$addonid.($array !== false ? '&rid='.$array['RevisionID'].'&sn='.$array['SN'].'&rd='.$array['RevisionDateline'] : '')) === '0') {
-/*jaideejung007*/		/*cpmsg('cloudaddons_genuine_message', '', 'error', array('addonid' => $addonid));*/
+		/*cpmsg('cloudaddons_genuine_message', '', 'error', array('addonid' => $addonid));*/
 	}
 }
 
@@ -400,14 +400,14 @@ function cloudaddons_clear($type, $id) {
 				if($type == 'plugin' && !$filedeleted) {
 					$pluginarray = getimportdata('Discuz! Plugin');
 					if($pluginarray['installfile']) {
-/*jaideejung007*/						/*@unlink($entrydir.'/'.$pluginarray['installfile']);*/
+						/*@unlink($entrydir.'/'.$pluginarray['installfile']);*/
 					}
 					if($pluginarray['upgradefile']) {
-/*jaideejung007*/						/*@unlink($entrydir.'/'.$pluginarray['upgradefile']);*/
+						/*@unlink($entrydir.'/'.$pluginarray['upgradefile']);*/
 					}
 					$filedeleted = true;
 				}
-/*jaideejung007*/				/*@unlink($entrydir.'/'.$f);*/
+				/*@unlink($entrydir.'/'.$f);*/
 			}
 		}
 	}

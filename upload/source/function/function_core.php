@@ -465,10 +465,11 @@ function lang($file, $langvar = null, $vars = array(), $default = null) {
 			}
 		}
 		$returnvalue = & $_G['cache']['pluginlanguage_script'];
+		!is_array($returnvalue) && $returnvalue = array();
 		$key = &$file;
 	}
-	$return = $langvar !== null ? (isset($returnvalue[$key][$langvar]) ? $returnvalue[$key][$langvar] : null) : $returnvalue[$key];
-	$return = $return === null ? ($default !== null ? $default : $langvar) : $return;
+	$return = $langvar !== null ? (isset($returnvalue[$key][$langvar]) ? $returnvalue[$key][$langvar] : null) : (is_array($returnvalue[$key]) ? $returnvalue[$key] : array());
+	$return = $return === null ? ($default !== null ? $default : ($path != 'plugin' ? '' : $file . ':') . $langvar) : $return;
 	$searchs = $replaces = array();
 	if($vars && is_array($vars)) {
 		foreach($vars as $k => $v) {
@@ -837,22 +838,22 @@ function dstrlen($str) {
 	if(strtolower(CHARSET) != 'utf-8') {
 		return strlen($str);
 	}
-//jaideejung007	$count = 0;
-//jaideejung007	for($i = 0; $i < strlen($str); $i++){
-//jaideejung007		$value = ord($str[$i]);
-//jaideejung007		if($value > 127) {
-//jaideejung007			$count++;
-//jaideejung007			if($value >= 192 && $value <= 223) $i++;
-//jaideejung007			elseif($value >= 224 && $value <= 239) $i = $i + 2;
-//jaideejung007			elseif($value >= 240 && $value <= 247) $i = $i + 3;
-//jaideejung007	    	}
-//jaideejung007    		$count++;
-//jaideejung007	}
-/*jaideejung007*/	return mb_strlen($str,'utf-8');
+	$count = 0;
+	for($i = 0; $i < strlen($str); $i++){
+		$value = ord($str[$i]);
+		if($value > 127) {
+			$count++;
+			if($value >= 192 && $value <= 223) $i++;
+			elseif($value >= 224 && $value <= 239) $i = $i + 2;
+			elseif($value >= 240 && $value <= 247) $i = $i + 3;
+	    	}
+    		$count++;
+	}
+	return $count;
 }
 
 function cutstr($string, $length, $dot = ' ...') {
-/*jaideejung007*/        if(dstrlen($string) <= $length) {
+	if(strlen($string) <= $length) {
 		return $string;
 	}
 
