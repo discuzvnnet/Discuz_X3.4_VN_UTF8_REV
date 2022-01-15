@@ -208,7 +208,7 @@ $lang = array (
   'counter_thread_cover_fiderror' => 'ID diễn đàn sai',
   'counter_thread_cover_fidnopicstyle' => 'Diễn đàn được chỉ định không mở chế độ danh sách ảnh',
   'counter_thread_cover_succeed' => 'Đã hoàn thành xây dựng lại bìa chủ đề',
-  
+
   'remoderate_thread_succeed' => 'Chủ đề / tiêu đề bài đăng và nội dung đã được xem xét lại',
   'remoderate_blog_succeed' => 'Tiêu đề và nội dung nhật ký đã được xem xét lại',
   'remoderate_pic_succeed' => 'Đã hoàn thành xem xét tiêu đề hình ảnh',
@@ -346,6 +346,7 @@ $lang = array (
   'members_edit_credits_failure' => 'Người dùng được tối ưu hóa sẽ không thể chỉnh sửa điểm ',
   'members_edit_credits_succeed' => 'Đã chỉnh sửa điểm người dùng thành công ',
   'members_edit_medals_succeed' => 'Huy hiệu người dùng đã được chỉnh sửa thành công ',
+  'members_edit_lock' => 'Bạn không thể khóa trực tiếp người dùng này, vui lòng <a href="{ADMINSCRIPT}?action=members&operation=search&uid={uid}&submit=yes&frames=yes" target="_blank">chỉnh sửa</a> để xóa danh tính của “{grouptitle}”',
   'members_edit_illegal' => 'Bạn không thể cấm trực tiếp người dùng, vui lòng <a href="{ADMINSCRIPT}?action=members&operation=search&uid={uid}&submit=yes&frames=yes" target="_blank">chỉnh sửa</a> để xóa danh tính “{grouptitle}”',
   'members_edit_illegal_portal' => 'Bạn không thể cấm trực tiếp người dùng, vui lòng <a href="{ADMINSCRIPT}?action=portalpermission&uid={uid}" target="_blank">hỏi về các quyền liên quan đến cổng của họ</a> và giải thích',
   'members_edit_reason_invalid' => 'Bạn đã không nhập lý do cho sự thay đổi này',
